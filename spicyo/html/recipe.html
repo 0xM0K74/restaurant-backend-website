@@ -1,0 +1,56 @@
+
+    
+    <div class="yellow_bg">
+   <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="title">
+                     <h2>Our Product</h2>
+                    
+                  </div>
+               </div>
+            </div>
+          </div>
+</div>
+    <!-- section -->
+    <section class="resip_section">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-12">
+            <div class="owl-carousel owl-theme">
+                <!-- fetch data-->
+                <?php
+                while($productsData=mysqli_fetch_assoc($products)){
+                    $productName=$productsData['product_name'];
+                    $productPrice=$productsData['product_price'];
+                    $productPhoto=$productsData['product_photo'];
+
+
+                ?>
+
+                <div class="item">
+                    <div class="product_blog_img">
+                        <img src="../images/<?php  echo $productPhoto   ?>" alt="#" />
+                    </div>
+                    <div class="product_blog_cont">
+                        <h3><?php  echo $productName   ?></h3>
+                        <h4><span class="theme_color">$</span><?php  echo $productPrice   ?></h4>
+                    </div>
+                </div>
+                 <!-- fetch data-->
+                 <?php
+                       }
+                 ?>
+
+               
+                
+
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+
+    
